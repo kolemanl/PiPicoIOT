@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pico Wi-Fi Setup</title>
+</head>
+<body>
+    <h1>Configure Wi-Fi</h1>
+
+    <form action="/save_config" method="POST">
+        <label>SSID:</label><br>
+        <input name="ssid"><br><br>
+
+        <label>Password:</label><br>
+        <input name="password" type="password"><br><br>
+
+        <button type="submit">Save & Reboot</button>
+    </form>
+</body>
+</html>

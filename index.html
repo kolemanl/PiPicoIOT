@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title> Test Connection Page</title>
-</head>
-<body>
-    <h1>Connection Credentials</h1>
-    <form action="/connect" method="POST"></form>
-        <label for="ssid">SSID:</label><br>
-        <input type="text" id="ssid" name="ssid"><br><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Connect">
-    </form>
-</body>
+<!doctype html>
+<html>
+  <body>
+    <h1>Pico LED</h1>
+    <p>LED: <strong>{{LED_STATE}}</strong></p>
+    <button onclick="toggle()">Toggle</button>
+    <script>
+      function toggle() {
+        fetch('/toggle', {method: 'POST'}).then(()=>location.reload());
+      }
+    </script>
+  </body>
 </html>
